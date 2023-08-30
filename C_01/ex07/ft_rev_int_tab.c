@@ -35,11 +35,9 @@ int	main(void)
 {
 	int	tabela[] = {1,2,3,4,5};
 	int	size = 5;
-	int	tab;
 	int	i;
 
 	i = 0;
-	//tab = &tabela;
 	while(i < size)
 	{
 		printf("%d", tabela[i]);

@@ -6,7 +6,7 @@
 /*   By: jcavadas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/26 17:43:49 by jcavadas          #+#    #+#             */
-/*   Updated: 2023/08/26 18:49:53 by jcavadas         ###   ########.fr       */
+/*   Updated: 2023/08/28 17:51:01 by jcavadas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
@@ -45,3 +45,10 @@ void	ft_print_comb(void)
 		i++;
 	}
 }
+/*
+int	main(void)
+{
+	ft_print_comb();
+	return (0);
+}
+*/

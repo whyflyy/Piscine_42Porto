@@ -6,7 +6,7 @@
 /*   By: jcavadas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 10:50:57 by jcavadas          #+#    #+#             */
-/*   Updated: 2023/08/24 15:41:56 by jcavadas         ###   ########.fr       */
+/*   Updated: 2023/08/28 11:14:06 by jcavadas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
@@ -15,3 +15,10 @@ void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
+/*
+int	main(void)
+{
+	ft_putchar('k');
+	return (0);
+}
+*/

@@ -6,7 +6,7 @@
 /*   By: jcavadas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/25 11:43:01 by jcavadas          #+#    #+#             */
-/*   Updated: 2023/08/26 16:57:05 by jcavadas         ###   ########.fr       */
+/*   Updated: 2023/08/28 17:47:25 by jcavadas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
@@ -22,3 +22,10 @@ void	ft_is_negative(int n)
 		write(1, "N", 1);
 	}
 }
+/*
+int	main(void)
+{
+	ft_is_negative(6);
+	return (0);
+}
+*/

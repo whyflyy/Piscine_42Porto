@@ -6,7 +6,7 @@
 /*   By: jcavadas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 19:13:04 by jcavadas          #+#    #+#             */
-/*   Updated: 2023/08/28 17:59:40 by jcavadas         ###   ########.fr       */
+/*   Updated: 2023/08/30 18:24:24 by jcavadas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
@@ -22,7 +22,7 @@ void	ft_print_comb2(void)
 	int	j;
 
 	j = 00;
-	while (j < 99)
+	while (j <= 98)
 	{
 		i = j +1;
 		while (i <= 99)
@@ -34,7 +34,7 @@ void	ft_print_comb2(void)
 			ft_putchar (i % 10 + '0');
 			if (!(j == 98 && i == 99))
 			{
-				write (1, ", ", 1);
+				write (1, ", ", 2);
 			}
 			i++;
 		}

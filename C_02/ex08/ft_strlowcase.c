@@ -29,8 +29,8 @@ char	*ft_strlowcase(char *str)
 	}
 	return (str);
 }
-/*
-#include <stdio.h>
+
+#include <stdio.h>i
 
 int	main(void)
 {
@@ -39,4 +39,4 @@ int	main(void)
 	printf("%s\n", ft_strlowcase(str));
 	return (0);
 }
-*/
+

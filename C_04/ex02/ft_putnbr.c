@@ -6,7 +6,7 @@
 /*   By: jcavadas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 12:41:37 by jcavadas          #+#    #+#             */
-/*   Updated: 2023/09/05 12:56:22 by jcavadas         ###   ########.fr       */
+/*   Updated: 2023/09/05 13:09:22 by jcavadas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_putnbr(int nb)
 {
-	int		divisor;	
-	char	digit;	
+	int		divisor;
+	char	digit;
 
 	if (nb < 0)
 	{

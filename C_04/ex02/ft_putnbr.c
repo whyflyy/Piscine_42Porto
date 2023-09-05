@@ -14,9 +14,8 @@
 
 void	ft_putnbr(int nb)
 {
-	int	divisor;
-	char	digito;
-	
+	int		divisor;	
+	char	digit;	
 
 	if (nb < 0)
 	{
@@ -30,14 +29,13 @@ void	ft_putnbr(int nb)
 	}
 	while (divisor > 0)
 	{
-		digito = '0' + (nb / divisor);
-		write (1, &digito, 1);
+		digit = '0' + (nb / divisor);
+		write (1, &digit, 1);
 		nb %= divisor;
 		divisor /= 10;
 	}
-
 }
-
+/*
 int main(void)
 {
 	ft_putnbr(42);
@@ -57,4 +55,4 @@ int main(void)
 	ft_putnbr(-99882200);
 	write (1, "\n", 1);
 	return (0);
-}
+}*/

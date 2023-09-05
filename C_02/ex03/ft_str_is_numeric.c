@@ -6,7 +6,7 @@
 /*   By: jcavadas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 11:25:50 by jcavadas          #+#    #+#             */
-/*   Updated: 2023/08/31 19:28:19 by jcavadas         ###   ########.fr       */
+/*   Updated: 2023/09/04 18:13:19 by jcavadas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,11 +38,15 @@ int	ft_str_is_numeric(char *str)
 /*
 #include <stdio.h>
 
-int	main(void)
+int	main(int argc, char **argv)
 {
-	char	str[] = "A125d";
+	if (argc != 2)
+	{
+		printf("Input nao aceite!");
+		return (0);
+	}
 	
-	printf("%d\n", ft_str_is_numeric(str));
+	printf("%d\n", ft_str_is_numeric(argv[1]));
 	return (0);
 }
 */

@@ -6,7 +6,7 @@
 /*   By: jcavadas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/01 10:25:15 by jcavadas          #+#    #+#             */
-/*   Updated: 2023/09/01 10:33:26 by jcavadas         ###   ########.fr       */
+/*   Updated: 2023/09/04 18:24:21 by jcavadas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,11 +38,15 @@ int	ft_str_is_printable(char *str)
 /*
 #include <stdio.h>
 
-int	main(void)
+int	main(int argc, char **argv)
 {
-	char	str[] = "Joao!\n";
-
-	printf("%d\n", ft_str_is_printable(str));
+	//char src[] = "Ola!\n";
+	if (argc != 2)
+	{
+		printf("Input nao aceite!");
+		return (0);
+	}
+	printf("%d\n", ft_str_is_printable(argv[1]));
 	return (0);
 }
 */

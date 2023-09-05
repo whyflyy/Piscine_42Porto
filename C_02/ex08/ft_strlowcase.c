@@ -6,7 +6,7 @@
 /*   By: jcavadas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/01 11:36:39 by jcavadas          #+#    #+#             */
-/*   Updated: 2023/09/01 11:38:18 by jcavadas         ###   ########.fr       */
+/*   Updated: 2023/09/04 19:01:04 by jcavadas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,18 @@ char	*ft_strlowcase(char *str)
 	}
 	return (str);
 }
+/*
+#include <stdio.h>
 
-#include <stdio.h>i
-
-int	main(void)
+int	main(int argc, char **argv)
 {
-	char	str[] = "JOAO";
+	if (argc != 2)
+	{
+		printf("Input nao aceite!");
+		return (0);
+	}
 
-	printf("%s\n", ft_strlowcase(str));
+	printf("%s\n", ft_strlowcase(argv[1]));
 	return (0);
 }
-
+*/

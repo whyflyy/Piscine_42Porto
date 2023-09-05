@@ -6,7 +6,7 @@
 /*   By: jcavadas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 23:05:42 by jcavadas          #+#    #+#             */
-/*   Updated: 2023/08/31 18:37:34 by jcavadas         ###   ########.fr       */
+/*   Updated: 2023/09/04 18:07:39 by jcavadas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,33 +15,33 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 	unsigned int	i;
 
 	i = 0;
-	while (i < n)
+	while (i < n && src[i] != '\0')
 	{
-		if (src[i] != '\0')
-		{
-			dest[i] = src[i];
-		}
-		else if (src[i] == '\0')
-		{
-			dest[i] = '\0';
-		}
-		else
-		{
-			dest[i] = '\0';
-		}
+		dest[i] = src[i];
 		i++;
 	}
+	while (i < n)
+	{
+		dest[i] = '\0';
+		i++;
+	}
+	dest [i] = '\0';
 	return (dest);
 }
 /*
 #include <stdio.h>
+#include <stdlib.h>
 
-int	main(void)
+int	main(int argc, char **argv)
 {
-	char	src[5] = "Joao";
-	char	dest[5];
-
-	printf("%s\n", ft_strncpy(dest, src, 5));
+	if (argc != 3)
+	{
+		printf("Input nao aceite!");
+		return (0);
+	}
+	char	dest[50];
+	ft_strncpy(dest, argv[1], atoi(argv[2]));
+	printf("%s\n", dest);
 	return (0);
 }
 */

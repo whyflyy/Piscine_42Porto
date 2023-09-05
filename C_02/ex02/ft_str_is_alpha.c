@@ -6,7 +6,7 @@
 /*   By: jcavadas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 23:17:53 by jcavadas          #+#    #+#             */
-/*   Updated: 2023/08/31 18:40:52 by jcavadas         ###   ########.fr       */
+/*   Updated: 2023/09/04 18:10:46 by jcavadas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,15 @@ int	ft_str_is_alpha(char *str)
 /*
 #include <stdio.h>
 
-int	main(void)
+int	main(int argc, char **argv)
 {
-	char	str[] = "Joao!";
+	if (argc != 2)
+	{
+		printf("Input nao aceite!");
+		return (0);
+	}
 
-	printf("%d\n", ft_str_is_alpha(str));
+	printf("%d\n", ft_str_is_alpha(argv[1]));
 	return (0);
 }
 */

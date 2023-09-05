@@ -6,7 +6,7 @@
 /*   By: jcavadas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/01 10:48:36 by jcavadas          #+#    #+#             */
-/*   Updated: 2023/09/01 11:33:15 by jcavadas         ###   ########.fr       */
+/*   Updated: 2023/09/04 18:57:40 by jcavadas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,15 @@ char	*ft_strupcase(char *str)
 /*
 #include <stdio.h>
 
-int	main(void)
+int	main(int argc, char **argv)
 {
-	char	str[] = "joao";
+	if (argc != 2)
+	{
+		printf("Input nao aceite!");
+		return (0);
+	}
 
-	printf("%s\n", ft_strupcase(str));
+	printf("%s\n", ft_strupcase(argv[1]));
 	return (0);
 }
 */

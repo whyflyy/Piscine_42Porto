@@ -6,7 +6,7 @@
 /*   By: jcavadas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 19:35:34 by jcavadas          #+#    #+#             */
-/*   Updated: 2023/09/01 10:20:04 by jcavadas         ###   ########.fr       */
+/*   Updated: 2023/09/04 18:20:30 by jcavadas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,11 +38,14 @@ int	ft_str_is_uppercase(char *str)
 /*
 #include <stdio.h>
 
-int	main(void)
+int	main(int argc, char **argv)
 {
-	char	str[] = "JOAO";
-
-	printf("%d\n", ft_str_is_uppercase(str));
+	if (argc != 2)
+	{
+		printf("Input nao aceite!");
+		return (0);
+	}
+	printf("%d\n", ft_str_is_uppercase(argv[1]));
 	return (0);
 }
 */

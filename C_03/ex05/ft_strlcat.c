@@ -54,13 +54,13 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 
 int	main(int argc, char **argv)
 {
-	if (argc != 4)
+	if (argc != 3)
 	{
 		printf("Input nao aceite!");
 		return (0);
 	}
 	char dest[50] = "Ola";
-	printf("%d\n", ft_strlcat(dest, argv[2], (atoi(argv[3]))));
+	printf("%d\n", ft_strlcat(dest, argv[1], (atoi(argv[2]))));
 	printf("%s\n", dest);
 	return (0);
 }*/

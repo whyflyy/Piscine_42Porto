@@ -13,22 +13,23 @@
 char	*ft_strstr(char *str, char *to_find)
 {
 	int	i;
-	int	x;
+	int	j;
 
 	i = 0;
-	x = 0;
-	while (str[i] != '\0')
+	if (to_find[0] == '\0')
+		return (str);
+	while (str[i])
 	{
-		if (str[i] == to_find[i] || to_find[x] == '\0')
-			x++;
-		else
-			x = 0;
+		j = 0;
+		while (str[i + j] == to_find[j])
+		{
+			if (to_find[j + 1] == '\0')
+				return (&str[i]);
+			j++;
+		}
 		i++;
 	}
-	if (x == 0)
-		return ("NULL");
-	else
-		return (&str[i - x]);
+	return ("NULL");
 }
 /*
 #include <stdio.h>
@@ -41,7 +42,7 @@ int	main(int argc, char **argv)
 		printf("Input invalido!");
 		return (0);
 	}
-	//printf("Strstr normal: %s\n", strstr(argv[1], argv[2]));
-	printf("Ft_trstr: %s\n", ft_strstr(argv[1], argv[2]));
+	printf("Strstr normal: %s\n", strstr(argv[1], argv[2]));
+	printf("Ft_strstr: %s\n", ft_strstr(argv[1], argv[2]));
 	return (0);
 }*/

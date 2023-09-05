@@ -17,7 +17,7 @@ char	*ft_strstr(char *str, char *to_find)
 
 	i = 0;
 	x = 0;
-	while (*str != '\0')
+	while (str[i] != '\0')
 	{
 		if (str[i] == to_find[i] || to_find[x] =='\0')
 			x++;
@@ -28,9 +28,9 @@ char	*ft_strstr(char *str, char *to_find)
 	if (x == 0)
 		return ("NULL");
 	else
-		return (&str[i - x];
+		return (&str[i - x]);
 }
-/*
+
 #include <stdio.h>
 #include <string.h>
 
@@ -44,4 +44,4 @@ int	main(int argc, char **argv)
 	//printf("Strstr normal: %s\n", strstr(argv[1], argv[2]));
 	printf("Ft_trstr: %s\n", ft_strstr(argv[1], argv[2]));
 	return (0);
-}*/
+}

@@ -10,33 +10,45 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int ft_strlcat(char *dest, char *src, unsigned int size)
+int	ft_strlen(char *str)
 {
-	unsigned int	i;//destlen
-	unsigned int	j;//strlen
-	unsigned int 	x;
+	int	i;
 
 	i = 0;
-	j = 0;
-	x = 0;
-	while (i < size && dest[i] != '\0')
-		i++;
-	while (src[j] != '\0')
-		j++;
-	unsigned int	as = size - i;
-	if (as == 0)
-		return (i - j);
-
-	while (x < as - 1 && src[i] != '\0')
+	while (*str != '\0')
 	{
-		dest[i] = src[x];
-		x++;
 		i++;
+		str++;
 	}
-	dest[i] = '\0';
-	return (i + j);
+	return (i);
 }
 
+unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
+{
+	unsigned int	i;
+	unsigned int	j;
+	unsigned int	res_d;
+	unsigned int	res_s;
+
+	i = ft_strlen(dest);
+	j = 0;
+	res_d = ft_strlen(dest);
+	res_s = ft_strlen(src);
+	if (size < 1)
+		return (res_s + size);
+	while (src[j] && i < size - 1)
+	{
+		dest [i] = src[j];
+		i++;
+		j++;
+	}
+	dest[i] = '\0';
+	if (size < res_d)
+		return (res_s + size);
+	else
+		return (res_d + res_s);
+}
+/*
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -47,8 +59,8 @@ int	main(int argc, char **argv)
 		printf("Input nao aceite!");
 		return (0);
 	}
-	char dest[] = "Ola";
+	char dest[50] = "Ola";
 	printf("%d\n", ft_strlcat(dest, argv[2], (atoi(argv[3]))));
 	printf("%s\n", dest);
 	return (0);
-}
+}*/

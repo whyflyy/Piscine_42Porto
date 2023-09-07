@@ -1,32 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_power.c                               :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcavadas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/06 22:27:52 by jcavadas          #+#    #+#             */
-/*   Updated: 2023/09/06 22:39:08 by jcavadas         ###   ########.fr       */
+/*   Created: 2023/09/07 11:51:35 by jcavadas          #+#    #+#             */
+/*   Updated: 2023/09/07 11:58:41 by jcavadas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_iterative_power(int nb, int power)
+int	ft_sqrt(int nb)
 {
-	int	res;
+	int	i;
 
-	res = 1;
-	if (nb == 0 && power == 0)
+	i = 1;
+	while (i < nb)
 	{
-		return (1);
+		if ((i * i) == nb)
+		{
+			return (i);
+		}
+		i++;
 	}
-	if (power < 0)
-		return (0);
-	while (power > 0)
-	{
-		res *= nb;
-		power --;
-	}
-	return (res);
+	return (0);
 }
 /*
 #include <stdio.h>
@@ -34,14 +31,14 @@ int	ft_iterative_power(int nb, int power)
 
 int	main(int argc, char **argv)
 {
-	int	res;
+	int res;
 
-	if (argc != 3)
+	if (argc != 2)
 	{
 		printf("Input nao aceite!");
 		return (0);
 	}
-	res = ft_iterative_power(atoi(argv[1]), atoi(argv[2]));
-	printf("O resultado e: %d\n", res);
+	res = ft_sqrt(atoi(argv[1]));
+	printf("A raiz quadrada de %d e: %d\n", atoi(argv[1]), res);
 	return (0);
 }*/

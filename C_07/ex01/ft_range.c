@@ -1,40 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
+/*   ft_range.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcavadas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/07 11:08:18 by jcavadas          #+#    #+#             */
-/*   Updated: 2023/09/07 11:27:03 by jcavadas         ###   ########.fr       */
+/*   Created: 2023/09/08 12:11:04 by jcavadas          #+#    #+#             */
+/*   Updated: 2023/09/08 12:23:21 by jcavadas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_fibonacci(int index)
-{
-	if (index == 0)
-		return (0);
-	if (index == 1)
-		return (1);
-	else
-		return (ft_fibonacci(index - 1) + ft_fibonacci(index - 2));
-}
-/*
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
+
+int	*ft_range(int min, int max)
+{
+	int	*array;
+	int	i;
+
+	i = 0;
+	if (min >= max)
+		return (NULL);
+	array = (int *)malloc(sizeof(int) * (max - min));
+	while (min < max)
+	{
+		array[i] = min;
+		min++;
+		printf("Array[%d]: %d\n", i, array[i]);
+		i++;
+	}
+	return (array);
+}
 
 int	main(int argc, char **argv)
 {
-	int	n;
-	int	res;
-
-	if (argc != 2)
-	{
-		printf("Input nao aceite!");
-		return (0);
-	}
-	n = atoi(argv[1]);
-	res = ft_fibonacci(n);
-	printf("O %d numero da sequencia de Fibonnaci e: %d\n", n, res);
+	(void) argc;
+	ft_range(atoi(argv[1]), atoi(argv[2]));
 	return (0);
-}*/
+}

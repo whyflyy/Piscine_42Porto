@@ -21,13 +21,14 @@ int	ft_find_next_prime(int nb)
 	{
 		if ((nb % i) == 0)
 		{
-			return (nb);
+			nb++;
+			i = 2;
 		}
 		i++;
 	}
-	while ()
+	return (nb);
 }
-
+/*
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -43,4 +44,4 @@ int	main(int argc, char **argv)
 	res = ft_find_next_prime(atoi(argv[1]));
 	printf("O numero primo seguinte e: %d\n", res);
 	return (0);
-}
+}*/

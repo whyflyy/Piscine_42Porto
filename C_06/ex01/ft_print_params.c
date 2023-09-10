@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_program_name.c                            :+:      :+:    :+:   */
+/*   ft_print_params.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcavadas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/08 09:41:42 by jcavadas          #+#    #+#             */
-/*   Updated: 2023/09/08 11:06:18 by jcavadas         ###   ########.fr       */
+/*   Created: 2023/09/10 12:22:28 by jcavadas          #+#    #+#             */
+/*   Updated: 2023/09/10 12:25:45 by jcavadas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,14 @@ void	ft_putstr(char *str)
 
 int	main(int argc, char **argv)
 {
-	(void) argc;
-	ft_putstr(argv[0]);
-	write(1, "\n", 1);
+	int	i;
+
+	i = 1;
+	while (i < argc)
+	{
+		ft_putstr(argv[i]);
+		ft_putstr("\n");
+		i++;
+	}
 	return (0);
 }

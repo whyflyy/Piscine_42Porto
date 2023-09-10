@@ -12,16 +12,19 @@
 
 int	ft_sqrt(int nb)
 {
-	int	i;
+	int	exp;
 
-	i = 1;
-	while (i < nb)
+	exp = 1;
+	if (nb > 0)
 	{
-		if ((i * i) == nb)
+		while (exp * exp <= nb)
 		{
-			return (i);
+			if (exp * exp == nb)
+				return (exp);
+			if (exp > 46340)
+				return (0);
+			exp++;
 		}
-		i++;
 	}
 	return (0);
 }

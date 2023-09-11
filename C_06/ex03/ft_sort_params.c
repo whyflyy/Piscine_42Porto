@@ -48,8 +48,8 @@ void	ft_print_args(int argc, char **argv)
 
 int	main(int argc, char **argv)
 {
-	int	i;
-	int	j;
+	int		i;
+	int		j;
 	char	*arg;
 
 	i = 1;

@@ -42,11 +42,11 @@ char	*ft_strcpy(char *dest, char *src)
 char	*ft_strdup(char *src)
 {
 	unsigned int	i;
-	char	*str;
+	char			*str;
 
 	i = ft_strlen(src);
 	str = (char *)malloc(sizeof(char) * i);
-	if(!(str))
+	if (!(str))
 		return (NULL);
 	return (ft_strcpy(str, src));
 }
